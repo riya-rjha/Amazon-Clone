@@ -3,11 +3,12 @@ import React from 'react'
 const MainPage = () => {
     return (
         <div>
-            <img src="./Images/startBG.jpg" />
-            <img src="./Images/bg-2.jpg" />
-            <img src="./Images/bg-3.jpg" />
-            <img src="./Images/bg-4.jpg" />
-            <img src="./Images/bg-5.jpg" />
+            <img className='w-full h-full' id='bg-img' src="./Images/startBG.jpg" />
+            <div className=" p-4 text-center m-4 -mt-[200px] font-bold text-[18px] bg-gray-300">
+                <p>
+                    You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
+                </p>
+            </div>
         </div>
     )
 }

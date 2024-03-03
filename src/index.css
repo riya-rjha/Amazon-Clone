@@ -14,6 +14,10 @@
   min-height: 100vh;
 }
 
+#bg-img {
+  mask-image: linear-gradient(to bottom, pink, rgba(0, 0, 0, 0.137));
+}
+
 
 @tailwind base;
 @tailwind components;
