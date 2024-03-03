@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import Product from './Product.jsx';
 
 const MainPage = () => {
     return (
@@ -8,6 +9,65 @@ const MainPage = () => {
                 <p>
                     You are on amazon.com. You can also shop on Amazon India for millions of products with fast local delivery.
                 </p>
+            </div>
+            {/* id, title, img, price, rating */}
+            <div className="grid m-[50px] gap-[25px] grid-cols-4">
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
+                <Product
+                    id='1'
+                    title='Deals in PCs'
+                    price={12.65}
+                    rating={5}
+                    img='./Images/bg-3.jpg'
+                />
             </div>
         </div>
     )
