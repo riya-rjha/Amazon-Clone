@@ -11,7 +11,7 @@ const MainPage = () => {
                 </p>
             </div>
             {/* id, title, img, price, rating */}
-            <div className="grid m-[50px] gap-[25px] grid-cols-4">
+            <div className="grid m-[50px] gap-[25px] grid-cols-4 mt-12">
                 <Product
                     id='1'
                     title='Deals in PCs'
