@@ -20,49 +20,49 @@ const MainPage = () => {
                     img='./Images/bg-3.jpg'
                 />
                 <Product
-                    id='1'
+                    id='2'
                     title='Deals in PCs'
                     price={12.65}
                     rating={5}
                     img='./Images/bg-3.jpg'
                 />
                 <Product
-                    id='1'
+                    id='3'
                     title='Deals in PCs'
                     price={12.65}
                     rating={5}
                     img='./Images/bg-3.jpg'
                 />
                 <Product
-                    id='1'
+                    id='4'
                     title='Deals in PCs'
                     price={12.65}
                     rating={5}
                     img='./Images/bg-3.jpg'
                 />
                 <Product
-                    id='1'
+                    id='5'
                     title='Deals in PCs'
                     price={12.65}
                     rating={5}
                     img='./Images/bg-3.jpg'
                 />
                 <Product
-                    id='1'
+                    id='6'
                     title='Deals in PCs'
                     price={12.65}
                     rating={5}
                     img='./Images/bg-3.jpg'
                 />
                 <Product
-                    id='1'
+                    id='7'
                     title='Deals in PCs'
                     price={12.65}
                     rating={5}
                     img='./Images/bg-3.jpg'
                 />
                 <Product
-                    id='1'
+                    id='8'
                     title='Deals in PCs'
                     price={12.65}
                     rating={5}
