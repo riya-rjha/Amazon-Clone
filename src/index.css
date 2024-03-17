@@ -12,11 +12,10 @@
 #root {
   min-width: fit-content;
   min-height: 100vh;
+  background-position: top;
+  background-image: url('Images/bg-2.jpg');
 }
 
-#bg-img {
-  mask-image: linear-gradient(to bottom, pink, rgba(0, 0, 0, 0.137));
-}
 
 
 @tailwind base;
