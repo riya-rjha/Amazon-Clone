@@ -9,14 +9,16 @@
   font-style: normal;
 }
 
+
 #root {
   min-width: fit-content;
   min-height: 100vh;
-  background-position: top;
-  background-image: url('Images/bg-2.jpg');
+  background-color: #EAEDED;
 }
 
-
+.sub-total-comp{
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.56);
+}
 
 @tailwind base;
 @tailwind components;

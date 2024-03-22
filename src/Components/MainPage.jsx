@@ -2,14 +2,14 @@ import React from 'react';
 import Product from './Product.jsx';
 
 const productsData = [
-    { id: '1', title: 'Laptop Deals', price: 799.99, rating: 5, img: '../Images/laptop.avif' },
-    { id: '2', title: 'Smartphone Deals', price: 299.99, rating: 2, img: '../Images/smartphone.avif' },
-    { id: '3', title: 'Camera Deals', price: 399.99, rating: 2, img: '../Images/camera.avif' },
-    { id: '4', title: 'Headphone Deals', price: 99.99, rating: 3, img: '../Images/headphone.avif' },
-    { id: '5', title: 'Tablet Deals', price: 199.99, rating: 3, img: '../Images/tablet.jpg' },
-    { id: '6', title: 'Gaming Console Deals', price: 399.99, rating: 5, img: '../Images/console.jpg' },
-    { id: '7', title: 'TV Deals', price: 799.99, rating: 5, img: '../Images/tv.jpg' },
-    { id: '8', title: 'Smartwatch Deals', price: 199.99, rating: 4, img: '../Images/smartwatch.avif' }
+    { id: '1', title: 'Laptop Deals', price: 799.99, rating: 5, img: '../Images/laptop.avif', size: '14 By 20' },
+    { id: '2', title: 'Smartphone Deals', price: 299.99, rating: 2, img: '../Images/smartphone.avif', size: '8 By 4' },
+    { id: '3', title: 'Camera Deals', price: 399.99, rating: 2, img: '../Images/camera.avif', size: 'Free size' },
+    { id: '4', title: 'Headphone Deals', price: 99.99, rating: 3, img: '../Images/headphone.avif', size: 'Free size' },
+    { id: '5', title: 'Tablet Deals', price: 199.99, rating: 3, img: '../Images/tablet.jpg', size: '12 By 10' },
+    { id: '6', title: 'Gaming Deals ', price: 399.99, rating: 5, img: '../Images/console.jpg', size: 'Free size' },
+    { id: '7', title: 'TV Deals', price: 799.99, rating: 5, img: '../Images/tv.jpg', size: '16 by 20' },
+    { id: '8', title: 'Smartwatch Deals', price: 199.99, rating: 4, img: '../Images/smartwatch.avif', size: 'Free size' }
 ];
 
 
@@ -32,6 +32,7 @@ const MainPage = () => {
                         price={product.price}
                         rating={product.rating}
                         img={product.img}
+                        size={product.size}
                     />
                 ))}
             </div>

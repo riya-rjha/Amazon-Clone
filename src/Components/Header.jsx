@@ -4,8 +4,13 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import { useStateValue } from './StateProvider';
 
 const Header = () => {
+
+    const [{ basket }] = useStateValue();
+    console.log(basket);
+
     return (
         <div className=' sticky top-0 z-50'>
             <header className='flex items-center justify-evenly bg-[#131921] p-[20px] max-h-[96px]'>
@@ -44,9 +49,12 @@ const Header = () => {
                     <p>Returns </p>
                     <p className='font-bold'>& Orders</p>
                 </div>
-                <div className="hover:border hover:border-white p-2 cursor-pointer">
-                    <ShoppingCartIcon className=' text-6xl text-white' />
-                </div>
+                <Link to='/checkout'>
+                    <div className="hover:border hover:border-white p-2 cursor-pointer">
+                        <p className='text-white ml-[6px] text-xl font-bold'>{basket?.length}</p>
+                        <ShoppingCartIcon className=' text-6xl text-white' />
+                    </div>
+                </Link>
             </header>
 
             <nav className="flex items-center bg-[#232F3E] p-2 max-h-10">
