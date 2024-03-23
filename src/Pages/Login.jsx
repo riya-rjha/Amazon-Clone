@@ -3,11 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
 import auth from '../firebase.js';
 import { Link } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
-
   const navigate = useNavigate();
-
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -19,7 +19,7 @@ const Login = () => {
   const loginAccount = (e) => {
     e.preventDefault();
     if (!isValidEmail(email)) {
-      alert('Enter a valid Email ID');
+      toast.error('Enter a valid Email ID');
       return;
     }
     signInWithEmailAndPassword(auth, email, password)
@@ -28,7 +28,7 @@ const Login = () => {
         navigate('/');
       })
       .catch((error) => {
-        alert('No account with those credentials exist!');
+        toast.error('No account with those credentials exist!');
         console.log(error.message);
       })
   }
@@ -36,7 +36,7 @@ const Login = () => {
   const registerAccount = (e) => {
     e.preventDefault();
     if (!isValidEmail(email)) {
-      alert('Enter a valid Email ID');
+      toast.error('Enter a valid Email ID');
       return;
     }
     createUserWithEmailAndPassword(auth, email, password)
@@ -44,7 +44,7 @@ const Login = () => {
         navigate('/');
       })
       .catch((error) => {
-        alert('Account already exists! Kindly log into the existing account!')
+        toast.error('Account already exists! Kindly log into the existing account!')
         console.log(error.message);
       })
   }
@@ -106,6 +106,7 @@ const Login = () => {
           </button>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
