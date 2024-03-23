@@ -28,4 +28,4 @@ This project is a simplified version of Amazon, featuring basic functionalities 
 1. Navigate to the home page.
 2. Sign in or create a new account on the login page.
 3. Browse through the available products and click on the "Add to Cart" button to add items to your cart.
-4. Proceed to the checkout page to review your items and complete the purchase process.
+4. Proceed to the checkout page to review your items.
