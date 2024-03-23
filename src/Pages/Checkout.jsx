@@ -13,7 +13,7 @@ const Checkout = () => {
     const itemCountString = basket.length === 1 ? 'item' : 'items';
 
     return (
-        <div className='bg-[#EAEDED] min-h-screen'>
+        <div className='bg-[#EAEDED] mb-12'>
             <Header />
             <div className="grid gap-4 mx-8 mt-8 bg-white p-8 rounded-md">
                 {/* Product Container */}

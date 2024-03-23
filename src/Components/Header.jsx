@@ -5,11 +5,23 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
 import { useStateValue } from './StateProvider';
+import auth from '../firebase.js'
 
 const Header = () => {
 
     const [{ basket }] = useStateValue();
     console.log(basket);
+
+    const [{ user }, dispatch] = useStateValue();
+
+    const login = () => {
+        if (user) {
+            dispatch({
+                type: 'EMPTY_BASKET'
+            });
+            auth.signOut();
+        }
+    }
 
     return (
         <div className=' sticky top-0 z-50'>
@@ -39,10 +51,10 @@ const Header = () => {
                     />
                     <SearchIcon className='relative right-[30px]' />
                 </div>
-                <Link to='/login'>
-                    <div className='text-white p-2 cursor-pointer hover:border hover:border-white'>
-                        <p>Hello, <span className='font-bold'>User</span></p>
-                        <p>Accounts & Lists</p>
+                <Link to={!user && '/login'}>
+                    <div onClick={login} className='text-white p-2 cursor-pointer hover:border hover:border-white'>
+                        <p>Hello, <span className='font-bold'>{user?.email.replace(/@.*|\d+/g, "").toUpperCase()}</span></p>
+                        <p>{user ? 'Sign Out' : 'Sign In'}</p>
                     </div>
                 </Link>
                 <div className='text-white p-2 cursor-pointer hover:border hover:border-white'>

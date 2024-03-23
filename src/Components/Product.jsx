@@ -1,12 +1,13 @@
 import React from 'react';
 import { useStateValue } from './StateProvider';
+import { Link } from 'react-router-dom';
 
 const Product = ({ id, title, price, rating, img, size }) => {
     if (!id || !title) {
         return null; // No component rendered 
     }
 
-    const [{ }, dispatch] = useStateValue();
+    const [{ user }, dispatch] = useStateValue();
 
     const addToCart = () => {
         dispatch({
@@ -42,12 +43,22 @@ const Product = ({ id, title, price, rating, img, size }) => {
                 <p className="text-gray-600">Size: <span className="font-bold">{size}</span></p>
 
                 <p className="text-gray-600">Price: <span className="font-bold">${price}</span></p>
-                <button
-                    className="bg-gray-800 text-white px-4 py-2 rounded-md font-semibold hover:bg-black transition duration-300 self-center mt-4 w-full"
-                    onClick={addToCart}
-                >
-                    Add To Cart
-                </button>
+                {user ? (
+                    <button
+                        className="bg-gray-800 text-white px-4 py-2 rounded-md font-semibold hover:bg-black transition duration-300 self-center mt-4 w-full"
+                        onClick={addToCart}
+                    >
+                        Add To Cart
+                    </button>
+                ) : (
+                    <Link to='/login'>
+                        <button
+                            className="bg-gray-800 text-white px-4 py-2 rounded-md font-semibold hover:bg-black transition duration-300 self-center mt-4 w-full"
+                        >
+                            Add To Cart
+                        </button>
+                    </Link>
+                )}
             </div>
         </div>
     );

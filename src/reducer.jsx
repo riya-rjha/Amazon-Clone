@@ -6,12 +6,27 @@ export const initialState = {
 function reducer(state, action) {
     console.log(action);
     switch (action.type) {
+
+        case 'EMPTY_BASKET':
+            return {
+                ...state,
+                basket: []
+            }
+
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user,
+            }
+
         case 'ADD_TO_BASKET':
             return {
                 ...state,
                 basket: [...state.basket, action.item]
             }
+
         //Code to add to basket
+
         case 'REMOVE_FROM_BASKET':
             let newBasket = [...state.basket];
             const id = state.basket.findIndex((basketItem) => basketItem.id === action.id);
@@ -25,7 +40,15 @@ function reducer(state, action) {
                 ...state,
                 basket: newBasket
             };
+
+        case 'SET_BASKET':
+            return {
+                ...state,
+                basket: newBasket
+            };
+
         //Code to remove from basket
+
         default:
             return state;
     }
